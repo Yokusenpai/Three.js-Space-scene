@@ -77,7 +77,7 @@ let spacecraft;
 
 //loader
 const loader = new GLTFLoader();
-loader.load('/spacescene.glb', (gltf) => {
+loader.load(`${import.meta.env.BASE_URL}spacescene.glb`, (gltf) => {
   scene.add(gltf.scene);
 
   planet = gltf.scene.getObjectByName('Planet');
